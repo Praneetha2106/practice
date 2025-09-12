@@ -1,21 +1,53 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>SE</groupId>
   <artifactId>HospitalMgmtSystem</artifactId>
-  <pakaging>jar</pakaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
+  <packaging>war</packaging>
+
   <name>HospitalMgmtSystem Maven Webapp</name>
-  <url>http://maven.java.org12</url>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+  </properties>
+
   <dependencies>
+    <!-- Servlet API (provided by server like Tomcat/Jetty) -->
     <dependency>
-      <groupId>SE</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.6.0</version>
-      <scope>TEDT</scope>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
     </dependency>
+
+    <!-- JUnit for testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Add more dependencies here if needed -->
   </dependencies>
+
   <build>
-    <finalName>localhost:8080/FoodSystem</finalName>
+    <finalName>HospitalMgmtSystem</finalName>
+    <plugins>
+      <!-- Compiler plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
