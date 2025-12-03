@@ -1,0 +1,16 @@
+cd filepath
+docker build -t simple-calculator .
+docker run simple-calculator
+docker ps
+docker login
+docker tag simple-calculator praneetha642/simple-calculator
+docker push praneetha642/simple-calculator
+docker ps -a
+docker rm containerid
+docker rmi praneetha642/simple-calculator
+docker pull praneetha642/simple-calculator
+docker run Praneetha/simple-calculator
+docker ps -a
+docker rm containerid
+docker rmi praneetha642/simple-calculator
+docker logout
