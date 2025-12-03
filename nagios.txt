@@ -1,0 +1,11 @@
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+browser:localhost:8888
+user:nagiosadmin
+password:nagios
+another administration mode
+docker ps
+docker stop container name
+docker rm nagiosdemo
+docker image
+docker rmi imageid
