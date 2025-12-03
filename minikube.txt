@@ -1,0 +1,8 @@
+minikube start
+kubectl create deployments mynginx --image=nginx
+kubectl get deployments
+kubectl expose deployments mynginx --type=NodePort --port=80 --target-port=80
+kubectctl scale deployment mynginx --replicas=4
+kubectl get deployments
+kubectl get pods
+kubectl port-forward svc/mynginx 8081:80
